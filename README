@@ -17,6 +17,14 @@
 - The tool exploits the common vulnerabilities that caused private keys leakage.
 - Propagates the compromise starting from a single machine to the entire networks via looted private keys.
 
+## Documentation ##
+
+- The CLI entry points (`assassin.py` and `2fassassin/assassin.py`) are described in detail, junto con las funciones
+  que coordinan cada flujo, dentro de `docs/FUNCTIONS.md`.
+- Para escenarios que interactúan con operaciones transaccionales, consulta la guía oficial del Coinbase Developer
+  Platform sobre envío de transacciones en Python:
+  <https://coinbase.github.io/cdp-sdk/python/#sending-transactions>.
+
 
 ## Installing ##
 

@@ -6,11 +6,11 @@ import subprocess
 from subprocess import Popen 
 
 def analyze():
-    print "\n [Path] : [Type]"
-    print "\n-------------------------------------------------"
+    print("\n [Path] : [Type]")
+    print("\n-------------------------------------------------")
     os.system("file /root/2fassassin/loot/*.pfx")
-    print "\n-------------------------------------------------"
-    print "\n"
+    print("\n-------------------------------------------------")
+    print("\n")
 
     command = "openssl pkcs12 -info -in /root/2fassassin/loot/ClientCert.pfx -nomacver -noout -passin pass:unknown".split()
 
@@ -28,10 +28,10 @@ def analyze():
     for line in keyword(command):
         if word in line:
             for _ in range(re.findall(r"\w+", line).count(word)):
-                print "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
-                print "   [Detected]:  SSL Client Certificate PKCS#12 (X509 certs family)   \n"
-                print "                        (Password Protected)                         \n"
-                print "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n"
+                print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+                print("   [Detected]:  SSL Client Certificate PKCS#12 (X509 certs family)   \n")
+                print("                        (Password Protected)                         \n")
+                print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
 
 
 '''

@@ -3,7 +3,7 @@
 import sys, os
 
 def origin(user_origin):
-    print "The user '%s'" %user_origin +" is found on host:  "
+    print("The user '%s'" %user_origin +" is found on host:  ")
     cmd = ""
     cmd += "cat /root/.msf4/loot/ssh_login.txt | grep Downloaded | grep /home/%s" %user_origin
     cmd += " | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | sort -u"
@@ -11,12 +11,12 @@ def origin(user_origin):
     sys.exit()
 
 def accountxxx(computer):
-    print "\n #### These user accounts on host '%s'" %computer +" are potentially accessible ####  \n"
+    print("\n #### These user accounts on host '%s'" %computer +" are potentially accessible ####  \n")
     cmd = ""
     cmd = "cat /root/.msf4/loot/ssh_login.txt | grep Downloaded | grep /home | grep %s" %computer
     cmd += " | grep authorized* |awk '{ print $3}' | sort -u"
     os.system(cmd)
-    print "\n"
+    print("\n")
     sys.exit()
 
 def userxxx():
