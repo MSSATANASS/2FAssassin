@@ -33,10 +33,10 @@ def generate(username, password, server_ip):
 
 # fuck this shit !!!
 def connect(username, password, server_ip):
-    print "\nUSERNAME:  ", username
-    print "\nPASSWORD:  ", password
-    print "\nWINDOWS SERVER:  ", server_ip
-    print "____________________________________________________________\n"
+    print("\nUSERNAME:  ", username)
+    print("\nPASSWORD:  ", password)
+    print("\nWINDOWS SERVER:  ", server_ip)
+    print("____________________________________________________________\n")
     # send the client-certifcate to remote windows server
     key = "wmiexec.py " +username
     key += ":" +password
@@ -71,10 +71,10 @@ def connect(username, password, server_ip):
     sys.exit()
 
 def connect1(username, password, server_ip):
-    print "\nUSERNAME:  ", username
-    print "\nPASSWORD:  ", password
-    print "\nWINDOWS SERVER:  ", server_ip
-    print "____________________________________________________________\n"
+    print("\nUSERNAME:  ", username)
+    print("\nPASSWORD:  ", password)
+    print("\nWINDOWS SERVER:  ", server_ip)
+    print("____________________________________________________________\n")
     # send the client-certifcate to remote windows server
     key = "wmiexec.py " +username
     key += ":" +password
@@ -87,10 +87,10 @@ def connect1(username, password, server_ip):
 
 
 def connect2(username, password, server_ip):
-    print "\nUSERNAME:  ", username
-    print "\nPASSWORD:  ", password
-    print "\nWINDOWS SERVER:  ", server_ip
-    print "____________________________________________________________\n"
+    print("\nUSERNAME:  ", username)
+    print("\nPASSWORD:  ", password)
+    print("\nWINDOWS SERVER:  ", server_ip)
+    print("____________________________________________________________\n")
     # send the client-certifcate to remote windows server
     key = "wmiexec.py " +username
     key += ":" +password
@@ -103,10 +103,10 @@ def connect2(username, password, server_ip):
 
 
 def connect3(username, password, server_ip):
-    print "\nUSERNAME:  ", username
-    print "\nPASSWORD:  ", password
-    print "\nWINDOWS SERVER:  ", server_ip
-    print "____________________________________________________________\n"
+    print("\nUSERNAME:  ", username)
+    print("\nPASSWORD:  ", password)
+    print("\nWINDOWS SERVER:  ", server_ip)
+    print("____________________________________________________________\n")
     # execute the batch file to add the client certificate to current user personal store
     run = "wmiexec.py " +username
     run += ":" +password

@@ -25,7 +25,7 @@ def bruteforce():
     bar = progressbar.ProgressBar(maxval=60, \
         widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
     bar.start()
-    for i in xrange(10):
+    for i in range(10):
         bar.update(i+1)
         sleep(0.05)
         wordlist = "/root/2fassassin/crack/wordlist/2fa-wordlist.txt"
